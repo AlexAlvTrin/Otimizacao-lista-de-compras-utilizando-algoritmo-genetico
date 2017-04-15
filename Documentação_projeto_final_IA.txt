@@ -1,0 +1,29 @@
+Programa desenvolvido por Alexandre Alves Trindade, Denys Cézar e Hugo Lopes.
+
+A. Caracterização do problema
+O problema consiste na otimização de uma lista de compras. Utilizando dados reais encontrados no endereço eletrônico http://www4.goiania.go.gov.br/portal/dados/uploads/arquivos/619/423525332060185.pdf , sendo 8 supermercados e 8 produtos, queremos encontrar qual a combinação desses produtos para obter o menor prejuízo, obedecendo as restrições estabelecidas no início do problema.
+
+B. Modelagem matemática
+Existe no programa três matrizes, matriz pedidos, custo e benefício. A matriz benefício é a multiplicação dos preços dos produtos pela quantidade de produtos. E é exatamente isso que queremos encontrar, utilizando o algoritmo genético para encontrar qual a ordem de que produtos comprar em qual supermercados de forma a ter o menor custo total da compra.
+
+C. Representação
+O custo dos produtos em relação ao supermercados é feito em matriz, o número de de produtos, denominamos pedidos e é representado como uma matriz. O gasto total de uma certa quantidade de produtos pelo seu preço é representado na matriz benefício. No programa em alguns momentos tratamos essas matrizes como listas. De forma que o indivíduo solução é dado como uma lista, devido a quantidade de 8 produtos e 8 supermercados os primeiros 8 itens desse indivíduo é o preço do primeiro produto nos diferentes supermercados multiplicado pela quantidade desse produto a ser compra em cada um desses 8 supermercados, assim sucessivamente para os outros produtos dessa lista de compras.
+
+D. Função de avalicação(Fitness)
+Utilizamos como função de avaliação dois tipos de restrições. A primeira é a restrição de quantidade de produtos total da lista de compras, desse modo somando todos os itens de uma linha da matriz pedidos, não pode ultrapassar determinado número. A outra função de avaliação é quantidade de produtos por supermercado. No momento de montar aleatoriamente a matriz pedidos, e quando aplicávamos a primeira restrição, os indivíduos com uma grande quantidade de zeros não oferecia muitas possibilidades para analisar melhor o problema. Então com uma restrição de itens por supermercado, cada linha da matriz pedidos se tornou mais variada. 
+
+E. Variáveis de entrada
+As variáveis de entrada são a matriz custo ( o preço de cada produto por supermercado), e as restrições de quantidade de produtos totais na lista de compra e quantidade de produtos permitido por supermercado. As outras informações são calculadas a partir das anteriores.
+
+F. Significado dos resultados
+Sendo um problema real, o resultado desse programa oferece uma solução otimizada para uma determinada lista de compras. Esse resultado mostra o quanto pode-se economizar em uma compra, tendo em consideração os preços disponíveis em nossa região.
+
+G. Tutorial de uso
+O programa é uma aplicação nos produtos encontrados no endereço eletrônico acima. Para necessidade diferentes, podemos modificar os elementos da matriz custo, das restrições de produtos totais da compra, e produtos permitidos por supermercado para encontrar a solução de diferentes listas de compras. 
+
+
+
+
+
+
+
